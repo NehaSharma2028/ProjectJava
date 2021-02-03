@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   p.abc {text-align: center; background-color: salmon; font-size: 16pt;font-style: italic;}
+
+    </style>
+ <script type="text/JavaScript">
+  
+  function add(a,b)
+   {
+     var a=document.form1.name1.value;    
+     var b =document.form1.name2.value;
+     Result=eval(a)+eval(b);
+     document.form1.name3.value=Result;
+     document.form1.name1.value="";
+     document.form1.name2.value="";
+
+  }
+
+  function sub(a,b)
+   {
+     var a=document.form1.name1.value;    
+     var b =document.form1.name2.value;
+     Result=eval(a)-eval(b);
+     document.form1.name3.value=Result;
+     document.form1.name1.value="";
+     document.form1.name2.value="";
+
+  }
+</script>
+</head>
+<body>
+   
+    <h1><p class='abc'> Online Calculator</p></h1><br>
+    <form name="form1">
+     <label>Enter 1st Number</label>
+     <input type="text" name="name1" id="id1"><br>
+     <label>Enter 2nd Number</label>
+     <input type="text" name="name2" id="id2"><br>
+     <label>Result</label>
+     <input type="text" name="name3" id="id3" readonly><br>
+     <input type="button" value="Sum" onClick="add()">
+     <input type="button" value="Sub" onClick="sub()">
+</form>
+</body>
+</html>

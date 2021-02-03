@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+       p.abc{background-color: salmon; font-size: 16pt; text-align: center;text-shadow: skyblue;}
+
+     </style>
+
+  <script type="text/JavaScript">
+     function total()
+      {
+        var eng = document.getElementById("id3").value;
+        var hindi = document.getElementById("id4").value;
+        var pun = document.getElementById("id5").value;
+        var ss = document.getElementById("id6").value;
+        var science= document.getElementById("id7").value;
+        var Result=eval(eng)+eval(hindi)+eval(pun)+eval(ss)+eval(science);
+        document.getElementById("id8").value=Result;
+       // document.getElementById("id3").value="";
+        //document.getElementById("id4").value="";
+        //document.getElementById("id5").value="";
+        //document.getElementById("id6").value="";
+        //document.getElementById("id7").value="";
+     }
+  
+
+     function average()
+      {
+        var eng = document.getElementById("id3").value;
+        var hindi = document.getElementById("id4").value;
+        var pun = document.getElementById("id5").value;
+        var ss = document.getElementById("id6").value;
+        var science= document.getElementById("id7").value;
+        var Result=eval(eng)+eval(hindi)+eval(pun)+eval(ss)+eval(science)/5*100;
+        document.getElementById("id9").value=Result;
+        document.getElementById("id3").value="";
+        document.getElementById("id4").value="";
+        document.getElementById("id5").value="";
+        document.getElementById("id6").value="";
+        document.getElementById("id7").value="";
+     }
+
+
+
+  </script>
+
+
+
+</head>
+<body>
+    <form name="form1">
+    <h2><p class="abc">Online Result</p></h2>
+    <br>
+  <label><b>Enter Your Name</b></label>
+  <input type="text" name="name1" id="id1"><br>
+   <label><b>Enter Your Roll Number</b></label>
+   <input type="text" name="name2" id="id2">
+   <br>
+   <label><b>Enter Marks In English</b></label>
+   <input type="text" name="name3" id="id3"> <br>
+   <label><b>Enter Marks In Hindi</b></label>
+   <input type="text" name="name4" id="id4"> <br>
+   <label><b>Enter Marks In Punjabi</b></label>
+   <input type="text" name="name5" id="id5"> <br>
+   <label><b>Enter Marks In Social Studies</b></label>
+   <input type="text" name="name6" id="id6"> <br>
+   <label><b>Enter Marks In Science</b></label>
+   <input type="text" name="name7" id="id7"> <br>
+   <label>Total</label>
+   <input type="text" name="name8" id="id8" readonly>
+   <label>Average</label>
+   <input type="text" name="name9" id="id9" readonly>
+
+
+    <input type="button" value="Total" onClick="total()">
+    <input type="button" value="Average" onClick="average()">
+  
+
+    </form>
+    
+</body>
+</html>

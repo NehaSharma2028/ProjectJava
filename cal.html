@@ -1,0 +1,59 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script type="text/JavaScript">
+      function add()
+       {
+        var a =document.form1.name1.value;
+        var b = document.getElementById("id2").value;
+        result=eval(a) + eval(b) ; 
+        document.getElementById("Resultid").value=result;
+        document.getElementById("id1").value=""; 
+        document.getElementById("id2").value="";      
+    }
+     
+
+    function sub ()
+       {
+        var a =document.form1.name1.value;
+        var b = document.getElementById("id2").value;
+        result=eval(a) - eval(b) ; 
+        document.getElementById("Resultid").value=result;
+        document.getElementById("id1").value=""; 
+        document.getElementById("id2").value="";      
+    }
+     
+
+
+
+
+
+</script>
+
+
+</head>
+<body>
+<form name="form1">
+   <h2>Online Calculator</h2><br>
+    <label >Enter First Number</label>
+    <input type="text" name="name1" id="id1"><br>
+    <label>Enter Second Number</label>
+    <input type="text" name="name2" id="id2"><br>
+    <label>Result</label>
+    <input type="text" name="Result" id="Resultid"><br>
+    <input type="button" value="Add" onClick="add()">
+    <input type="button" value="Sub" onClick="sub()">
+
+
+
+
+</form>    
+</body>
+</html>

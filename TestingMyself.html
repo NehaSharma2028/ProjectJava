@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+     <script type="text/JavaScript">
+     function validate()
+      {
+        var name = document.form1.uname.value;
+        var pass = document.form1.pname.value;
+        if (name.length==0) 
+        {
+            document.getElementById("t1").innerHTML="UserName Is Required";
+            document.getElementById("t2").innerHTML="";
+            return false;
+        }   
+        else if (pass.length==0)
+        {
+           document.getElementById("t1").innerHTML="";
+            document.getElementById("t2").innerHTML="Password Is Required";
+            
+            return false;
+        }
+        else
+        {
+            alert("Successfully Logged Inn");
+            return true;
+        }
+     }
+       function validate1()
+        {
+           var nino=document.getElementById("nid").value;
+           var name=document.getElementById("nid1").value;
+           var email=document.getElementById("eid").value;
+           ////document.getElementById("Details").innerHTML="Employee Norwegian Identification Number is"
+             //                  +nino +"Employee Name is "+name
+               //                +"Emoloyee Email id is "+email;       
+         //document.getElementById("Details").innerHTML="Employee Norwegian Identification Number is "+nino +"Employye Name is"+name+"Employee Email id is "+email;
+          //document.getElementById("Details").innerHTML=name;
+          //document.getElementById("Details").innerHTML=email;
+            var lin=document.getElementById("lid").value;
+            var dat=document.getElementById("did").value;
+            document.getElementById("Details").innerHTML=nino+name+email+lin+dat;
+         return false;
+        }
+
+
+</script>
+</head>
+<body>
+     <h1 style="color: tomato;background-color: turquoise;font-size: 16pt;">
+                        Login Validation Using JavaScript</h1>
+    <form name="form1" action="home.html" method="GET" onsubmit="return validate()" >
+     <label>UserName</label>
+     <input type="text" name="uname" id="uid">
+     <span id="t1"></span><br>
+     <label>Password</label>
+     <input type="password" name="pname" id="pid">
+     <span id="t2" style="font-size: small; color: royalblue;"></span><br>
+     <input type="submit" value="Submit">
+     <input type="reset" value="Reset">
+
+</form>
+
+
+<h2 style="color: saddlebrown;background-color: salmon;">Login Validation Using HTML5</h2><br>
+      <form action="home.html">
+          <label>UserName </label>
+          <input type="text" name="uname" id="uid" required minlength="4" maxlength="10" ><br>
+          <label>Password </label>
+        <input type="password" name="pname" id="pid" required pattern="\D{2}@\d{3}"><br>
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+
+      </form>
+
+       <h2 style="color: sienna; background-color: rgba(126, 205, 90, 0.363);">More Features of HTML5</h2><br>
+       <form name="form1" method="GET" onsubmit="validate1()"> 
+        <label>Enter Norwegian Identification Number</label>
+        <input type="number" name="nname" id="nid" required maxlength="16"><br>
+        <label>Enter Your Name </label>
+        <input type="text" name="nname1" id="nid1" required><br>
+        <label>Enter Your Email Id </label>
+        <input type="email" name="ename" id="eid" required ><br>
+        <label>Enter Your Linkedin Profile </label>
+        <input type="url" name="lname" id="lid" required ><br>
+        <label>Enter Your Date Of Birth</label>
+        <input type="date" name="dname" id="did" required ><br>
+        
+        
+        
+        <input type="submit" value="Gather Credentials">
+
+
+
+        
+       </form>
+     <h2>Employee Details </h2>
+    <span id="Details"></span>
+
+    </body>
+    </html>
+
+
+
+
+
+

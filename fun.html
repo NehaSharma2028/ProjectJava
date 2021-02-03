@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type='text/JavaScript'>
+    // Pre defined Functions or Build In Functions
+    // Result of Final Examination
+
+    var sub1, sub2;
+    var Result;
+    document.write ('<b>Welcome to The Final Exams Result</b>');
+    var name= prompt('Pls Enter Your Name');
+    var roll=prompt('Pls Enter Your Roll Number ');
+    document.write ('<br>Welcome '+ name);
+    document.write ('<br>Your Roll Number is '+ roll);
+    var sub1=prompt('Pls Enter Your Sub1 Marks');
+    var sub2=prompt('Pls Enter Your Sub2 Marks');
+    Result = eval(sub1)+eval(sub2);
+    document.write ('The Sum Total is'+Result);
+    
+
+   if (Result>188)
+   {
+    alert('Congratulations !! You Have Passed');
+       }
+else
+{
+    alert('Sorry!!!! You Have Failed');
+}
+document.write ('<br/>Finished');
+        </script>
+</body>
+</html>

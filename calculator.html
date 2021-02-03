@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <script type='text/JavaScript'>
+    
+     function add(a,b) 
+     {
+         var a=document.f1.uname.value;
+         var b=document.f1.uname1.value;
+         var Result=eval(a)+eval(b);
+         //alert('The Sum of 2 numbers is '+Result);
+         document.getElementById("uid2").value=Result;
+         document.getElementById("uid").value="";
+         document.getElementById("uid1").value="";
+     
+     }
+     function sub(a,b)
+     {
+       var a = document.f1.uname.value;
+       var b =document.f1.uname1.value;
+       var Result=eval(a)-eval(b);
+      // alert('The Substraction of 2 numbers is '+Result);
+        document.getElementById("uid2").value=Result;
+        document.getElementById("uid").value="";
+        document.getElementById("uid1").value="";     
+     }
+
+
+</script>
+
+
+</head>
+<body>
+    <form name=f1>
+     <h2><b>Online Calculator</b></h2><br>
+     <label>Enter the First Number </label>
+     <input type="text" name="uname" id="uid">
+     <br>
+     <label>Enter the Second Number </label>
+     <input type="text" name="uname1" id="uid1">
+     <br>
+     <label>Result</label>
+     <input type="text" name="uname2" id="uid2" readonly><br>
+     <br>
+     <input type="button" value="Sum" onClick="add(2,3)">
+    <input type="button" value="sub" onClick="sub(30,20)">
+</form>
+</body>
+</html>

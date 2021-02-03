@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/JavaScript">
+function emp(id,name,desg,salary)
+{
+    if (desg=="Manager")
+    {
+        return salary+3000;
+    }
+else if (desg=="Developer")
+{
+    return (salary+2000);
+}
+else
+{
+    return salary+1000;
+}
+}
+</script>
+
+</head>
+<body>
+    <script type="text/JavaScript">
+    var grosssalary1=emp(2,"Neha","Manager",20000); 
+    alert(grosssalary1);   
+    </script>
+    
+</body>
+</html>

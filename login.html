@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+   <script type="text/JavaScript">
+    function validate()
+      {
+          var name=document.form1.name1.value;
+          var pass=document.form1.name2.value;
+
+          if (name.length==0)
+          
+          {
+              alert('UserName is Required')
+              return false;
+          }
+          else if (pass.length==0)
+          {
+              alert("Password is Required")
+              return false;
+          }
+            else 
+            {
+               alert("Successfully Logged Inn")
+               return true;
+            }
+        }
+
+</script>
+</head>
+<body>
+    
+    <form action="loops.html" name="form1"  onsubmit="return validate()">
+        <label>UserName</label>
+        <input type="text" name="name1" id="id1"><br>
+        <label>Password</label>
+        <input type="text" name="name2" id="id2"><br>
+        <input type="button" value="Submit">
+     </form>
+</body>
+</html>

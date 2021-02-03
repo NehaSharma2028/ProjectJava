@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/JavaScript">
+function emp(id,name,age,dept,salary)
+{
+  if (salary>=20000)
+  {
+      bonus=salary+2000;
+      return (bonus);
+
+  }  else if (salary>15000)
+  {
+    bonus=salary+4000;
+    return(bonus);
+
+  }else if (salary>10000)
+  {
+      bonus=salary+6000;
+   return (bonus);
+  }
+}
+</script>
+</head>
+<body>
+<script type="text/JavaScript">
+
+var Result=emp(2,'Neha',30,'sales',20000);
+ // alert('The Actual Salary is '+salary);
+  alert('The Incremented Salary is '+Result);
+</script>    
+</body>
+</html>

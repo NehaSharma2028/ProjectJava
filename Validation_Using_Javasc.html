@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <script type="text/JavaScript">
+   
+function validate()
+ {
+  var name=document.getElementById("uid").value;
+  var pass=document.getElementById("pid").value;
+  
+  if (name.length==0)
+  {
+      //alert("UserName Is Required");
+      document.getElementById("t1").innerHTML="UserName is Required";
+      document.getElementById("t2").innerHTML="";
+      return false;
+
+  }
+  else if (pass.length==0)
+  {
+     // alert("Password is Required");
+     document.getElementById("t2").innerHTML="Password Is Required"; 
+     document.getElementById("t1").innerHTML="";
+     return false;
+  }
+  else 
+  {
+      alert("Successfully Logged Inn");
+      return true;
+  }
+}
+
+</script>
+
+
+
+</head>
+<body>
+  <form action="home.html" name="form1" method="GET" onsubmit="return validate()">
+    <h2>User Credentials</h2><br>
+    <label>UserName</label>
+<input type="text" name="uname" id="uid">
+<span id="t1"></span><br>
+
+<label>Password</label>
+<input type="pass" name="pname" id="pid">
+<span id="t2"></span><br>
+
+<input type="submit" name="Submit">
+<input type="reset" name="Reset">
+
+</form>    
+</body>
+</html>

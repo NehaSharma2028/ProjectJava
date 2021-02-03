@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    label.abc{font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;}
+</style>
+
+<script type="text/JavaScript">
+
+function validate() 
+{
+  var name = document.getElementById("id1").value;
+  var nor = document.getElementById("id2").value;
+  var email = document.getElementById("id3").value;
+  var phn = document.getElementById("id4").value;
+  var ur1 = document.getElementById("id5").value;
+  document.getElementById("details").innerHTML="The Name is"+name;
+  //+"<br>The Norwegian Identification 
+   //Number is "+nor+"<br>The Email id is "+email+"<br>The Phone Number is "+phn+"<br>The URL is "+ur1;
+     return false;
+
+}
+
+</script>
+</head>
+<body>
+    
+<form name="form1" method="GET" onsubmit="return validate()">
+
+<h2 style="color: lightblue;background-color:rosybrown;">Registration Form</h2><br>
+<label class="abc">Enter Your Name </label>
+<input type="text" name="n1" id="id1" required><br>
+
+<label class="abc">Enter Your Norwegian Identification Number </label>
+<input type="number" name="n2" id="id2" required><br>
+
+<label class="abc">Enter Your Email id  </label>
+<input type="email" name="n3" id="id3" required><br>
+
+<label class="abc">Enter Your Phone Number  </label>
+<input type="number" name="n4" id="id4" required><br>
+
+<label class="abc">Enter Your  URL </label>
+<input type="url" name="n5" id="id5" required><br>
+
+<input type="submit" value ="Confirm">
+
+</form>
+<h2>The Details Of Registration Are ---------------</h2>
+<span id ="details"></span>
+
+
+
+
+
+</body>
+</html>
